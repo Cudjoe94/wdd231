@@ -1,18 +1,14 @@
-/* normalize.css - Standard reset for consistency */
-/* You can include an external normalize.css file or add minimal resets here */
-
-/* small.css - Base styles (mobile-first) */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 10px;
     background-color: #333;
     color: white;
@@ -25,14 +21,15 @@ header img {
     margin-right: 10px;
 }
 
+/* Navigation */
 nav {
     background-color: #444;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: none;
 }
 
@@ -40,56 +37,60 @@ nav ul.open {
     display: block;
 }
 
-nav li {
-    padding: 10px;
+nav ul li {
+    margin: 5px 0;
 }
 
-nav a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
+    padding: 5px;
+    display: block;
 }
 
-#menu {
-    background: none;
-    border: none;
-    font-size: 24px;
+/* Buttons */
+button {
+    background-color: #555;
     color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
 }
 
+/* Main Content */
 main {
     padding: 20px;
 }
 
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
+    text-align: center;
     padding: 10px;
-    margin-top: 20px;
 }
 
-/* larger.css - Styles for larger screens */
-@media (min-width: 768px) {
+/* Larger Screen Styles */
+@media (min-width: 600px) {
     nav ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     nav ul li {
         margin: 0 15px;
     }
 
+    nav ul.open {
+        display: flex;
+    }
+
     #menu {
         display: none;
     }
 
-    #courses div {
-        padding: 10px;
-        border: 1px solid #ddd;
-        margin: 5px;
-    }
-
-    .completed {
-        background-color: lightgreen;
+    main {
+        max-width: 800px;
+        margin: auto;
     }
 }
