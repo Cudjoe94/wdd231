@@ -51,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    border: 1px solid #fff;
+    border: 1px;
     color: yellow;
 }
 
@@ -91,6 +91,15 @@ main {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-work{
+    text-align: center;
+
+}
+
+.location{
+    text-align: center;
 }
 
 /* Center align the certificate section */
