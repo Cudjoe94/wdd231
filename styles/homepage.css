@@ -1,96 +1,143 @@
-/* General Styles */
+:root {
+    --primary: #1d3a5f;
+    --secondary: #f4f4f4;
+    --accent: #a0522d;
+    --text: #ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: var(--secondary);
 }
 
-/* Header */
 header {
+    background: var(--primary);
+    color: var(--text);
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    justify-content: center;
 }
 
 header img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 10px;
+    border: 2px solid white;
+    margin-right: 15px;
 }
 
-/* Navigation */
 nav {
-    background-color: #444;
+    background-color: #070707;
     padding: 10px;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
     padding: 0;
-    display: none;
-}
-
-nav ul.open {
-    display: block;
 }
 
 nav ul li {
-    margin: 5px 0;
+    margin: 0 10px;
+    flex: 100%;
 }
 
-nav ul li a {
-    color: white;
+nav a {
+    color: var(--text);
     text-decoration: none;
-    padding: 5px;
-    display: block;
 }
 
-/* Buttons */
-button {
-    background-color: #555;
-    color: white;
+nav a:hover {
+    border: 1px solid #fff;
+    color: yellow;
+}
+
+nav a.active {
+    border-bottom: 2px solid yellow;
+}
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Grid layout for Course Work and Location */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Desktop layout: Side by side */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Styling for sections */
+.course-work, .location, .certificate {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center align the certificate section */
+.certificate {
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filters button {
+    background: var(--primary);
+    color: var(--text);
     border: none;
     padding: 10px;
     cursor: pointer;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+.filters button.active {
+    background: var(--accent);
 }
 
-/* Footer */
+#courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.course {
+    padding: 10px;
+    text-align: center;
+    background: var(--accent);
+    color: var(--text);
+    border-radius: 5px;
+}
+
+.completed {
+    background: gray;
+}
+
 footer {
-    background-color: #222;
-    color: white;
+    background: var(--primary);
+    color: var(--text);
     text-align: center;
     padding: 10px;
-}
-
-/* Larger Screen Styles */
-@media (min-width: 600px) {
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    main {
-        max-width: 800px;
-        margin: auto;
-    }
 }
