@@ -42,8 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("last-modified").textContent = document.lastModified;
-
-    document.getElementById("menu").addEventListener("click", () => {
-        document.getElementById("nav-links").classList.toggle("show");
-    });
 });
