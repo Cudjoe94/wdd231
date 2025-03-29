@@ -1,0 +1,207 @@
+:root {
+    --header-bg-color: #347a84;
+    --nav-bg-color: #000;
+    --white: #fff;
+    --nav-size: 1rem;
+    --section-header-bg-color: rgb(49, 118, 135);
+    /* --btn-bg-color: peru; */
+  }
+   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   
+  body {
+    background-color: var(--white);
+    box-sizing: border-box;
+  }
+   
+  header {
+    width: 100%;
+  }
+   
+  header .top-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--header-bg-color);
+    color: var(--white);
+  }
+   
+  header div img {
+    width: 50px;
+    height: 50px;
+  }
+   
+  header #menu-icon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    display: none;
+  }
+   
+  header #menu-icon::before {
+    content: "☰";
+  }
+   
+  header nav {
+    background-color: var(--nav-bg-color);
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+   
+  nav a {
+    color: var(--white);
+    font-size: var(--nav-size);
+    text-decoration: none;
+  }
+   
+  nav a:hover {
+    color: yellow;
+    transition: all ease-in-out 0.5s;
+  }
+   
+  main,
+  .container {
+    margin: 30px 100px;
+  }
+   
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+   
+  .first-section {
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 300px;
+  }
+   
+  .first-section h2 {
+    background-color: var(--section-header-bg-color);
+    padding: 10px 10px;
+    color: var(--white);
+    text-align: center;
+  }
+   
+  .first-section ul {
+    margin-left: 20px;
+  }
+   
+  .sec-section {
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    height: 300px;
+  }
+   
+  .sec-section h2 {
+    background-color: var(--section-header-bg-color);
+    padding: 10px 10px;
+    color: var(--white);
+    text-align: center;
+  }
+   
+  .sec-section img {
+    width: 345px;
+    height: 200px;
+    padding: 10px;
+  }
+   
+  .sec-section figcaption {
+    padding-left: 10px;
+  }
+   
+  .third-section {
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    grid-column: 1/3;
+  }
+   
+  .third-section h2 {
+    background-color: var(--section-header-bg-color);
+    padding: 10px 10px;
+    color: var(--white);
+    text-align: center;
+  }
+   
+  .top-header {
+    display: flex;
+    color: var(--white);
+    gap: 10px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+   
+  .top-header button {
+    background-color: var(--nav-bg-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 5px 50px;
+    gap: 10px;
+    border: none;
+  }
+   
+  .third-section hr {
+    position: relative;
+    margin-top: 10px;
+  }
+   
+  .course-work #course-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+  }
+   
+  #course-list .completed {
+    background-color: var(--header-bg-color);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+  }
+   
+  #course-list .not-completed {
+    background-color: var(--nav-bg-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    color: var(--white);
+  }
+   
+   
+  footer {
+    background-color: var(--header-bg-color);
+    margin-top: 50px;
+    height: 15vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    ;
+    align-items: center;
+  }
+   
+  footer p:last-child {
+    color: yellow;
+  }
+   
+  footer img {
+    width: 70px;
+    height: 35px;
+  }
